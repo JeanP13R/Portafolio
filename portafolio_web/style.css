@@ -1,0 +1,306 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+header{
+    display: flex;
+    background: linear-gradient(to bottom, #00aaff, #6558d8);
+    justify-content: space-between;
+    max-height: 80px;
+    flex-wrap: wrap;
+}
+.logo{
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+nav{
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 10px;
+    height: auto;
+    margin-right: 50px;
+}
+nav ul li{
+    padding: 10px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+nav ul li a:hover{
+    color: rgb(2, 209, 255);
+}
+.content{
+    background-color: #483D8B;
+    padding: 10px;
+}
+.content main{
+    display: flex;
+    width: auto;
+    height: 200px;
+    background-color: #ccc;
+    border: 1px solid #000;
+    border-radius: 8px;
+}
+.content .aboutme{
+    margin: 10px 5px 13px 8px;
+    font-weight: 24px;
+}
+.foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 25px;
+}
+.foto img{
+    background-color: #ffcc00;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+.descripcion{
+    display: flex;
+    align-items: center;
+    padding: 0px 40px;
+}
+
+.descripcion p{
+    font-size: 20px;
+}
+/*Habilidades*/
+
+section{
+    margin: 15px 0px;
+    align-items: center;
+}
+.titulo-habilidades{
+    margin: 10px;
+}
+.content-skills{
+    height: 470px;
+    margin: auto;
+    max-width: 1100px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 20px;
+    background-color: cadetblue;
+}
+.skills{
+    height: 220px;
+    width: 250px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    cursor: pointer;
+}
+.skills .lp{
+    margin: 0px;
+    background-color: #dbe5db;
+    border-radius: 8px;
+}
+
+.lp, .sello {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+  }
+
+.sello{
+    /* background-color: rgb(105, 120, 204);
+    width: 255px;
+    
+    cursor: pointer;
+    border-radius: 20px; */
+    background-color: #5d6163;
+    transform: rotateY(180deg);
+}
+.sello ul{
+    margin: 0;
+    padding: 30px;
+}
+.sello ul li{
+    margin: 10px 0px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+}
+
+
+.skills img{
+    width: 200px;
+    height: 200px;
+}
+/* Experiencia Laboral*/
+#exp{
+    display: flex;
+    flex-direction: row;
+}
+.experiencia h3{
+    margin:20px 0px;
+}
+.experiencia .empresa{
+    color: #000;
+    padding-bottom: 10px;
+    text-decoration: underline;
+}
+.experiencia{
+    background-color: dimgray;
+    padding: 10px 20px;
+    margin: 15px 5px;
+    width: 60%;
+}
+.experiencia p{
+    color: #fff;
+    padding: 0px 20px;
+}
+
+/*CONTÁCTO*/
+aside .contacto{
+    width: 40%;
+    padding: 10px 15px;
+    margin: 15px 5px;
+    background-image: url('images/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contacto h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 32px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-text-stroke: 1px black;
+    margin:20px 0px;
+}
+.contacto form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contacto form input{
+    padding: 10px 5px;
+    width: 80%;
+    margin: 5px 0px;
+}
+.contacto form .boton{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 20%;
+}
+.contacto .formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    padding: 0px;
+    margin: 0px;
+    background-color: #ccc;
+    border: 1px solid #000;
+    border-radius: 8px;
+}
+.menu-togle{
+    display: none;
+}
+
+/*El responsive*/
+@media screen and (max-width:435px){
+    nav{
+        display: none;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+    #exp{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .experiencia{
+        height: auto;
+        width: auto;
+    }
+    .contacto{
+        display: flex;
+        height: auto;
+        width: 400px !important;
+    }
+    main{
+        display: flex ;
+        flex-direction: column;
+        height: auto !important;
+    }
+    .descripcion p{
+        font-size: 14px;
+        padding: 10px auto;
+    }
+    .foto{
+        padding: 20px;
+    }
+    .titulo-habilidades{
+        padding: 10px;
+    }
+    .menu-togle{
+        display: block;
+        position: absolute;
+        background: #45c;
+        height: 100px;
+        width: 100px;
+        margin-left: 250px;
+    }
+}
+
+/* Estilos para el div de información de la habilidad */
+.info-habilidad {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: none;
+}
+
+/* footer */
+footer{
+    width: auto;
+    height: 15rem;
+    background-color: #000;
+    display: flex;
+}
+.info-personal{
+    margin: auto;
+}
+.info-personal li{
+    color: #fff;
+    list-style: none;
+    margin: 10px 0px;
+}
